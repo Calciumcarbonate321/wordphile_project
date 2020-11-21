@@ -19,12 +19,15 @@ print(word)
 
 while not haswon:
     u=input("Enter your guess: ")
-    user_input=u[0]
-
-    for cha in gameboard:
-        if cha=='_':
-            dash_index=gameboard.index(cha)
-            letter=word[dash_index]
-        if user_input==letter:
-            gameboard[dash_index]=user_input
+    if len(u)==1:
+        for cha in gameboard:
+            if cha=='_':
+                dash_index=gameboard.index(cha)
+                letter=word[dash_index]
+            if u==letter:
+                gameboard[dash_index]=u
     print(gameboard)
+
+    if u==word:
+        print("Congratulations, you have guessed it.")
+        haswon=True
