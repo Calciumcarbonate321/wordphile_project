@@ -28,6 +28,9 @@ while not haswon:
                 gameboard[dash_index]=u
     print(gameboard)
 
+    if '_' not in gameboard:
+        print("Congratulations, you have won.")
+        haswon=True
     if u==word:
         print("Congratulations, you have guessed it.")
         haswon=True
