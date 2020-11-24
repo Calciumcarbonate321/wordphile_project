@@ -20,14 +20,13 @@ for ch in word:
 
 print("Welcome to WORDPHILE\n")
 print("You have 5 lives in total. When you guess a word wrong, you will lose 1 life. When you lose all your lives, you die.\n")
-inpute=input("Do you want to know the word before hand?(Y/N)").upper()
-if inpute=='Y':
-    print("SIKE CHEATER! you really thought I would give you the word huh?\n")
-    counter-=1
-if inpute=='N':
-    print("You are a good boi. I give you 1 extra life.\n")
-    counter+=1
-print('\n')
+print("Let the game begin!")
+
+time.sleep(0.1)
+for i in range(0,5):
+    print(".....finding a word")
+    time.sleep(1)
+
 print(gameboard)
 
 print(word)
