@@ -29,8 +29,6 @@ for i in range(0,5):
 
 print(gameboard)
 
-print(word)
-
 
 while not haswon:
     u=input("\nEnter your guess: ")
