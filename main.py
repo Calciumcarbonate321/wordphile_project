@@ -21,8 +21,10 @@ for ch in word:
 
 #PRINTING THE INRODUCTION SCREEN
 print("Welcome to WORDPHILE\n")
+time.sleep(0.5)
 print("You have 5 lives in total. When you guess a word wrong, you will lose 1 life. When you lose all your lives, you die.\n")
-print("Let the game begin!")
+time.sleep(0.5)
+print("Let the game begin!\n")
 
 time.sleep(0.1)
 for i in range(0,5):
