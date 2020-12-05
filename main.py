@@ -11,6 +11,7 @@ dash_index=0
 letter=str()
 counter=5
 
+#RANDOMIZING THE GAME BOARD
 for ch in word:
     if random.randint(0,101) in range(0,34):
         w=ch
@@ -18,6 +19,7 @@ for ch in word:
         w="_"
     gameboard.append(w)
 
+#PRINTING THE INRODUCTION SCREEN
 print("Welcome to WORDPHILE\n")
 print("You have 5 lives in total. When you guess a word wrong, you will lose 1 life. When you lose all your lives, you die.\n")
 print("Let the game begin!")
@@ -29,7 +31,7 @@ for i in range(0,5):
 
 print(gameboard)
 
-
+#THE MAIN PROCESSING PART OF THE GAME
 while not haswon:
     u=input("\nEnter your guess: ")
     if len(u)==1:
