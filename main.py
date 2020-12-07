@@ -31,6 +31,7 @@ for i in range(0,5):
     print(".....finding a word")
     time.sleep(1)
 
+print("\n")
 print(gameboard)
 
 #THE MAIN PROCESSING PART OF THE GAME
@@ -51,7 +52,7 @@ while not haswon:
     if counter==0:
         print("You are already dead.")
         time.sleep(1)
-        print("Thank you for playing our game.\n Have a nice day!")
+        print("Thank you for playing our game.\nHave a nice day!")
         time.sleep(0.5)
         break
     print(gameboard)
