@@ -36,13 +36,14 @@ print(gameboard)
 
 #THE MAIN PROCESSING PART OF THE GAME
 while not haswon:
-    u=input("\nEnter your guess: ")
+    u=input("\nEnter your guess: ").upper()
+    print("\n")
     if len(u)==1:
         for cha in word:
             if u == cha:
                 w_index= word.index(cha)
                 if gameboard[w_index]==cha:
-                    print("\nYour guess is already in the word. You now have ",counter," lives left.\n ")
+                    print("Your guess is already in the word. You now have ",counter," lives left.\n ")
                 elif gameboard[w_index]=='_':
                     gameboard[w_index]=cha
 
@@ -50,13 +51,18 @@ while not haswon:
             counter-=1
             print("You have guessed wrong. You now have ",counter," lives left\n")
     if counter==0:
-        print("You are already dead.")
+        print("You are already dead.\n")
         time.sleep(1)
+        print("The word is:",word)
+        time.sleep(1)
+        print("\n")
         print("Thank you for playing our game.\nHave a nice day!")
         time.sleep(0.5)
         break
     print(gameboard)
     if '_' not in gameboard:
+        time.sleep(1)
+        print("\n")
         print("Congratulations, you have won.")
         time.sleep(0.5)
         print("Have a nice day!")
